@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <!-- Responsive and mobile friendly stuff -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Social Explorer</title>
+
+  <%= stylesheet_link_tag 'application', :media => "all" %>
+  <%= javascript_include_tag 'application' %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body class="grayBackground">
+
+<div id="header">
+  <%= render "header" %>
+</div>
+<div id="content">
+  <%= yield %>
+</div>
+<div id="footer" class="grayBackground">
+  <%= render "footer" %>
+</div>
+
+</body>
+</html>
