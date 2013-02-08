@@ -1,0 +1,71 @@
+<div class="pageBlock">
+  <div class="pageContentBlock">
+
+    <h1>Getting started</h1>
+    <p>
+      Intro text. Geocoding is the process of finding associated geographic coordinates (often expressed as latitude and longitude) from other geographic data, such as street addresses, or ZIP codes (postal codes). With geographic coordinates the features can be mapped and entered into Geographic Information Systems, or the coordinates can be embedded into media such as digital photographs via geotagging.
+      Reverse geocoding is the opposite: finding an associated textual location such as a street address, from geographic coordinates.
+      A geocoder is a piece of software or a (web) service that helps in this process.
+    </p>
+
+    <h1>Suggest</h1>
+    <p>
+      Description of the service and examples.
+    </p>
+
+    <p class="codeListing">
+      Sample code.
+    </p>
+
+    <h1>Search</h1>
+    <p>
+      Description of the service and examples.
+    </p>
+
+    <p class="codeListing">
+      Sample code.
+    </p>
+
+    <h1>Geocoder</h1>
+    <p>
+      Description of the service and examples.
+    </p><br/>
+
+    <h2>Example #1</h2>
+    <p class="exampleInput">
+        <%= text_field_tag(:geocoder_example1, 'http://geocoder.socialexplorer.com/geocode?format=xml&details=1&point=1&geometry=1&query=address_5656261_50', :class => "exampleInputTxt") %>
+        <%= tag "input", { "type" => "button", "value" => "Try it!", "onclick" => "geocoderService('geocoder_example1', 'geocoder_results1')", "class" => "seButton" } %>
+    </p>
+
+    <pre class="codeListing" id="geocoder_results1">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+  &lt;results query='address_5656261_50' time='2013/02/08 08:42:39'&gt;
+    &lt;result score='0' type='address' id='address_5656261_50' geometry='LINESTRING (-73.840865 40.941682, -73.841443 40.944115)' point='POINT (-73.84156676358391 40.94271492253961)'&gt;
+      50 Merriam Ave, Bronxville, NY, United States 10708
+      &lt;details&gt;
+        &lt;road&gt;
+          Merriam Ave
+        &lt;/road&gt;
+        &lt;usps&gt;
+          Bronxville
+        &lt;/usps&gt;
+        &lt;state&gt;
+          NY
+        &lt;/state&gt;
+        &lt;country&gt;
+          United States
+        &lt;/country&gt;
+        &lt;postalcode&gt;
+          10708
+        &lt;/postalcode&gt;
+        &lt;house_number&gt;
+          50
+        &lt;/house_number&gt;
+      &lt;/details&gt;
+    &lt;/result&gt;
+  &lt;/results&gt;
+    </pre>
+
+
+  </div>
+</div>

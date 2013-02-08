@@ -13,3 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+function geocoderService(txtFieldID, resultsFieldID)
+{
+    var txtInput = document.getElementById(txtFieldID);
+    $.ajax({
+        url: "/geocoder",
+        data: {
+            "url": txtInput.value
+        },
+        success: function(resultData) {
+            var resultsDiv = document.getElementById(resultsFieldID);
+            resultsDiv.innerHTML = resultData;
+        }
+    });
+}

@@ -204,3 +204,98 @@ div#footer a {
     border-color: #E6E6E6;
 }
 
+h1 {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    line-height: 140%;
+}
+
+/*
+    *******************************************************************************************
+    Code/example styles
+    *******************************************************************************************
+*/
+
+.codeListing {
+    background: #ffe;
+    font-family: monospace;
+    padding: 5px;
+    border: 2px dashed #d9a726;
+    margin: 10px;
+    overflow: auto;
+}
+
+.exampleInput {
+    margin: 10px;
+    padding: 0px;
+}
+
+.exampleInputTxt {
+    width: 90%;
+    height: 25px;
+}
+
+.exampleInputBtn {
+    width: 110px;
+    height: 32px;
+}
+
+.seButton {
+    width: 110px;
+    height: 28px;
+    background-color: #d95726;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px 15px;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+
+    outline: none;
+    -moz-outline-style: none;
+
+    -webkit-transition: background-color .15s ease-in;
+    -moz-transition: background-color .15s ease-in;
+    -o-transition: background-color .15s ease-in;
+    transition: background-color .15s ease-in;
+}
+
+.seButton:hover {
+    background-color: #cf3f27;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.seButton:active {
+    background-color: #d95726;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.seButton:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.seButton.sign_up_large {
+    font-size: 16px;
+    /*font-weight: bold;   */
+    padding: 8px 0;
+    width: 155px;
+}
+
+
