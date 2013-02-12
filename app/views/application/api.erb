@@ -1,30 +1,57 @@
 <div class="pageBlock">
   <div class="pageContentBlock">
+    <div class="pgTitle"><p style="margin: 0px;">Getting started</p></div>
+    <div class="normalText">
+      <p class="normalText">Geocoding is the process of finding associated geographic coordinates (often expressed as latitude and longitude) from other geographic data, such as street addresses, or ZIP codes (postal codes). With geographic coordinates the features can be mapped and entered into Geographic Information Systems, or the coordinates can be embedded into media such as digital photographs via geotagging. A geocoder is a piece of software or a (web) service that helps in this process. These steps include parsing the address, standardizing abbreviated values, assigning each address element to a category known as a match key, indexing the needed categories, searching the reference data, assigning a score to each potential candidate, filtering the list of candidates based on the minimum match score, and delivering the best match. Other means of geocoding might include locating a point at the centroid (center) of a land parcel, if parcel (property) data is available in the geographic information system database.
+        <br/><br/>
+        Reverse geocoding is the opposite: finding an associated textual location such as a street address, from geographic coordinates.
+        <br/><br/>
+        Our Geocoder API is designed as an alternative to expensive "off the shelf" geocoding softwares and APIs. Results of the API can be used on any kind of map ranging from Google maps to user's own custom mapping systems. The geocoder can be used both for geocoding and reverse geocoding. We tried to make it easy to use and understand. Our approach was to make it in such manner that user doesn't need to know much about geocoding and yet to get the results he needs.
+      </p>
+    </div>
 
-    <h1>Getting started</h1>
-    <p>
-      Intro text. Geocoding is the process of finding associated geographic coordinates (often expressed as latitude and longitude) from other geographic data, such as street addresses, or ZIP codes (postal codes). With geographic coordinates the features can be mapped and entered into Geographic Information Systems, or the coordinates can be embedded into media such as digital photographs via geotagging.
-      Reverse geocoding is the opposite: finding an associated textual location such as a street address, from geographic coordinates.
-      A geocoder is a piece of software or a (web) service that helps in this process.
+    <div class="pgTitle"><p style="margin: 0px;">Suggest</p></div>
+    <p class="normalTitleText">
+      Suggest service takes input data and returns exact result if any, if not it returns empy string. Suggest is used as a suggestion tool while typing desired query it automatically gives you possible querrys based on what user had typed in so far. This service can not detect any possible mistakes if any where made, since it does not uses any algorythm but it litteraly compares entered string with DB.
     </p>
 
-    <h1>Suggest</h1>
-    <p>
-      Description of the service and examples.
+    <h2>Suggest example #1</h2>
+    <p class="exampleInput">
+      <%= text_field_tag(:suggest_example1, 'http://geocoder.socialexplorer.com/suggest?limit=5&format=xml&details=0&bounded=0&viewbox=40.944704,40.941397,-73.843510,-73.84024&point=1&geometry=0&query=50 Merriam Ave', :class => "exampleInputTxt", :onKeyDown => "geocoderService('suggest_example1', 'suggest_results1', 'suggest')") %>
+      <%= tag "input", { "type" => "button", "value" => "Try it!", "onclick" => "geocoderService('suggest_example1', 'suggest_results1', 'suggest')", "class" => "seButton" } %>
     </p>
 
-    <p class="codeListing">
-      Sample code.
-    </p>
+    <pre class="codeListing" id="suggest_results1">
+&lt;results query="50 Merriam Ave" time="2012/12/28 11:32:30">
+  &lt;result score="1.5" within_viewbox="true" type="address" id="address_5656261_50">50 Merriam Ave, Bronxville, NY, United States 10708</result>
+      &lt;result score="0.75" within_viewbox="false" type="address" id="address_5722387_50">50 Merriam Ave, Bronx, NY, United States 10452</result>
+      &lt;result score="0.75" within_viewbox="false" type="address" id="address_4498237_50">50 Merriam Ave, Newton, NJ, United States 07860</result>
+      &lt;result score="0.75" within_viewbox="false" type="address" id="address_3983822_50">50 Merriam Ave, Bloomfield, CT, United States 06002</result>
+      &lt;result score="0.75" within_viewbox="false" type="address" id="address_6090894_50">50 Merriam Ave, Shrewsbury, MA, United States 01545</result>
+      &lt;/results>
+    </pre>
 
     <h1>Search</h1>
     <p>
-      Description of the service and examples.
+      Search is the main service which takes input data and according to it gives back results of a query. Search service uses algorithm which checks input string and returns the most possible result even if the input had some errors and the correct string is not entered. Service uses fuzzy logic to determine the asked result.
+      Main result object is "id" number, this id number then is used by geocoder service.
     </p>
 
-    <p class="codeListing">
-      Sample code.
+    <h2>Example #1</h2>
+    <p class="exampleInput">
+      <%= text_field_tag(:search_example1, 'http://geocoder.socialexplorer.com/search?format=xml&details=0&bounded=0&limit=20&viewbox=40.944704,40.941397,-73.843510,-73.84024&point=0&geometry=0&query=50 Merriam Ave Bronxville NY', :class => "exampleInputTxt", :onKeyDown => "geocoderService('search_example1', 'search_results1', 'search')") %>
+      <%= tag "input", { "type" => "button", "value" => "Try it!", "onclick" => "geocoderService('search_example1', 'search_results1', 'search')", "class" => "seButton" } %>
     </p>
+
+    <pre class="codeListing" id="search_results1">
+&lt;results query="50 Merriam Ave Bronxville NY" time="2012/12/28 11:29:31">
+  &lt;result score="6.8" within_viewbox="true" type="address" id="address_5656261_50">50 Merriam Ave, Bronxville, NY, United States 10708</result>
+      &lt;result score="4.3" within_viewbox="true" type="address" id="address_5656262_50">50 Merriam Pl, Bronxville, NY, United States 10708</result>
+      &lt;result score="1.88" within_viewbox="false" type="place" id="place_3608532">Bronxville, NY, United States</result>
+      &lt;result score="1.6" within_viewbox="false" type="place" id="place_3646668">Merrick, NY, United States</result>
+      &lt;result score="1.6" within_viewbox="false" type="place" id="place_3646750">Merritt Park, NY, United States</result>
+      &lt;/results>
+    </pre>
 
     <h1>Geocoder</h1>
     <p>
@@ -33,8 +60,8 @@
 
     <h2>Example #1</h2>
     <p class="exampleInput">
-        <%= text_field_tag(:geocoder_example1, 'http://geocoder.socialexplorer.com/geocode?format=xml&details=1&point=1&geometry=1&query=address_5656261_50', :class => "exampleInputTxt") %>
-        <%= tag "input", { "type" => "button", "value" => "Try it!", "onclick" => "geocoderService('geocoder_example1', 'geocoder_results1')", "class" => "seButton" } %>
+      <%= text_field_tag(:geocoder_example1, 'http://geocoder.socialexplorer.com/geocode?format=xml&details=1&point=1&geometry=1&query=address_5656261_50', :class => "exampleInputTxt", :onKeyDown => "geocoderService('geocoder_example1', 'geocoder_results1', 'geocode')") %>
+      <%= tag "input", { "type" => "button", "value" => "Try it!", "onclick" => "geocoderService('geocoder_example1', 'geocoder_results1', 'geocode')", "class" => "seButton" } %>
     </p>
 
     <pre class="codeListing" id="geocoder_results1">

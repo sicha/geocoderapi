@@ -1,21 +1,94 @@
 <div class="pageBlock">
   <div class="pageContentBlock">
-    <h1>Home</h1>
+    <div class="pgTitle"><p style="margin: 0px;">Home</p></div>
 
-    <div class="homeThumb">
+    <div id="thumbsHolder" style="width: 62%; height: 270px; text-align: center; margin: 0 auto; ">
+      <div id="thumb1" class="homeThumb">
+        <div class="upperThumb">
+          <h5>WHAT IS GEOCODING</h5>
+          <p style="font-size: 10px;">Geocoding is the process of finding associated geographic coordinates from other geographic data</p>
+        </div>
+        <div class="lowerThumb">
+          <img border="0" alt="Geocoder Icon" src="/assets/ImgWhatIs.png"/>
+        </div>
 
+      </div>
+
+      <div id="thumb2" class="homeThumb">
+        <div class="upperThumb">
+          <h5>HOW CAN YOU USE IT</h5>
+          <p style="font-size: 10px;">Our API can be used on any kind of map ranging from Google maps to user's own custom mapping systems.</p>
+        </div>
+        <div class="lowerThumb">
+          <img border="0" alt="Geocoder Icon" src="/assets/ImgHow2use2.png" style="vertical-align: bottom;"/>
+        </div>
+      </div>
+
+      <div id="thumb3" class="homeThumb">
+        <div class="upperThumb">
+          <h5>OUR PRODUCT</h5>
+          <p style="font-size: 10px;">The geocoder can be used both for geocoding and reverse geocoding.</p>
+        </div>
+        <div class="lowerThumb">
+          <img border="0" alt="Geocoder Icon" src="/assets/ImgProduct.png" style="vertical-align: bottom;"/>
+        </div>
+      </div>
+
+      <div id="thumb4" class="homeThumb">
+        <div class="upperThumb">
+          <h5>HOW TO GET IT</h5>
+          <p style="font-size: 10px;">With just couple of easy steps you can use GeoCoder from your home.</p>
+        </div>
+        <div class="lowerThumb">
+          <img border="0" alt="Geocoder Icon" src="/assets/ImgGetIt.png"/>
+        </div>
+      </div>
     </div>
 
-    <div class="homeThumb">
-
+    <div id="pageBreak">
+      <div style="width: 590px; float: left;">
+        <div class="redTitleText" style="padding-top: 10px;"><p>Don't waste any time, start Geocoding right now.</p></div>
+        <div class="bodyWhiteText"><p>Start using Geocoding solutions for personal and business use.</p></div>
+      </div>
+      <div style="background-image: url(&quot;/assets/lftBrk.png&quot;); width: 590px; height: 100px; float: right;"></div>
     </div>
+  </div>
+  <div class="pageContentBlock" id="exampleContentHolder">
+    <table style="width: 82%; text-align: center; margin: 0 auto; ">
+      <tr>
+        <td style="width: 528px; text-align: left;">
+          <div class="normalTitleText">
+            <p class="normalTitleText">Simple Geocoding by Street Address</p>
+          </div>
+          <div class="normalText">
+            <p class="normalText">Given a Venue model with known street address, automatically fetch coordinates after validation and store in latitude and longitude attributes. This module makes available as API to convert the information you already have into geographic information. It support a multiple of output formats (jSon & XML) and runs them through pluggable backends to produce geographic information. In addition to Latitude / Longitude points.</p>
+          </div>
+        </td>
+        <td style="width: 528px; text-align: left;">
+          <div class="normalTitleText">
+            <p class="normalTitleText">Perform geographic queries</p>
+          </div>
+          <div class="normalText">
+            <p class="normalText">Geocoder is a complete geocoding solution. With geocoding (by street or reverse), you can locate you're home or office anywhere, just by typing in the address.</p>
+            <p class="normalText">Reverse geocoding is opposite of regular Geocoding, find street address based on given coordinates, and distance queries. In case you have a longitude and latitude but want to find out what is the address or street of that point.</p>
+          </div>
+        </td>
+      </tr>
+    </table>
 
-    <div class="homeThumb">
-
-    </div>
-
-    <div class="homeThumb">
-
-    </div>
+    <table style="width: 62%; height: 270px; text-align: center; margin: 0 auto; ">
+      <tr>
+        <td>
+          <div id="googleMap">
+            <img border="0" alt="Google maps with geocoder" src="/assets/googleMaps.png">
+          </div>
+        </td>
+        <td>
+          <div id="socialExplorerMap">
+            <img border="0" alt="Google maps with geocoder" src="/assets/socialExplorerMaps.png">
+          </div>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>

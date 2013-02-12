@@ -1,16 +1,11 @@
 GeoCoderAPI::Application.routes.draw do
-  get "service_access_proxy/search"
-
-  get "service_access_proxy/suggest"
-
-  get "service_access_proxy/geocoder"
+  get "service_access_proxy/geocode"
 
   get "index" => "application#index"
   get "pricing"  => "application#pricing"
   get "api"  => "application#api"
   get "contact"  => "application#contact"
-
-  get "geocoder" => "service_access_proxy#geocoder"
+  get "geocode" => "service_access_proxy#geocode"
 
    root :to => 'application#index'
 

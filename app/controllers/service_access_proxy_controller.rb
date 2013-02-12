@@ -5,16 +5,9 @@ class ServiceAccessProxyController < ApplicationController
   require 'rexml/document'
 
 
-  def search
-    render :layout => false
-  end
-
-  def suggest
-    render :layout => false
-  end
-
-  def geocoder
-    link = "http://geocoder.socialexplorer.com/geocode?#{params[:url].split('?').last}"
+  def geocode
+    type = params[:type]
+    link = "http://geocoder.socialexplorer.com/" + type + "?#{params[:url].split('?').last}"
     parameters = CGI::parse(params[:url].split('?').last)
     isXML = parameters["format"].last.eql?("xml")
 

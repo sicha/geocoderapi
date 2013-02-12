@@ -1,10 +1,23 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+html, body, div, span, object, iframe, blockquote, h1, h2, h3, h4, h5, h6, p, img, pre, abbr, address, cite, code, del, dfn, em, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
     background: none repeat scroll 0 0 transparent;
     border: 0 none;
     font-size: 100%;
-    margin: 0;
     outline: 0 none;
     padding: 0;
+    margin: 0;
+}
+
+h1 {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+p {
+    line-height: 140%;
+    padding-bottom: 5;
 }
 
 body, html {
@@ -15,6 +28,8 @@ body, html {
 div.pageBlock {
     width: 100%;
     float: left;
+    background-image:url(../assets/bgTile.png);
+    background-repeat:repeat;
 }
 
 div.pageBlock.options {
@@ -55,9 +70,11 @@ div.pageOptions span.page_option_title {
 }
 
 div.pageContentBlock {
-    margin: 0 auto;
+    margin-left:auto;
+    margin-right:auto;
     max-width: 1200px;
     width: 100%;
+    background: #fff;
 }
 
 div.padded_container {
@@ -65,8 +82,9 @@ div.padded_container {
 }
 
 div#content {
-    min-height: 600px;
+    min-height: 400px;
     background-color: #FFFFFF;
+
 }
 
 .bold {
@@ -142,18 +160,133 @@ a:hover {
 
 }
 
+div#thumbsHolder {
+    margin: 0, 0 ,0 ,0;
+}
+
 div.homeThumb {
     height: 200px;
     width: 150px;
-    background: #777;
+    margin-left: 8px;
+    background: #d92626;
     float: left;
     border:1px solid;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 div.homeThumb:hover {
+    background: #db9175;
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
+
 }
+
+div#thumb1 {
+    border: 2px solid #d92626;
+    background: #fff;
+}
+
+div#thumb2 {
+    border: 2px solid #961b1a;
+    background: #fff;
+}
+div#thumb3 {
+    border: 2px solid #d9a726;
+    background: #fff;
+    display: table-cell;
+    vertical-align: bottom;
+}
+div#thumb4 {
+    border: 2px solid #d95726;
+    background: #fff;
+}
+
+div.upperThumb {
+    height: 96px;
+}
+
+div.lowerThumb {
+    height: 108px;
+}
+
+div.pgTitle {
+    text-decoration: none;
+    margin-left: 60px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 20px;
+    color: #d09a9a;
+}
+
+div#pageBreak {
+    height: 100px;
+    width: 100%;
+    background: #961b1a;
+    -webkit-transform: scale(1.02, 1);
+    -moz-transform: scale(1.02, 1);
+}
+
+div#exampleContentHolder {
+    width: 100%;
+    height: 570px;
+    padding-top: 10px;
+}
+
+div#googleMap {
+    float: left;
+}
+
+div#socialExplorerMap {
+    float: left;
+}
+
+/*
+    *******************************************************************************************
+    Fonts styles
+    *******************************************************************************************
+*/
+
+div.redTitleText {
+    text-decoration: none;
+    margin-left: 60px;
+    font-family: Helvetica;
+    font-size: 20px;
+    color: #d09a9a;
+}
+
+div.bodyWhiteText {
+    text-decoration: none;
+    margin-left: 60px;
+    margin-top: 8px;
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #f8f0f0;
+}
+
+div.normalTitleText {
+    text-decoration: none;
+    margin-left: 60px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 20px;
+    color: #aeaeae;
+}
+
+div.normalTitleText p {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #e8e8e8;
+}
+
+div.normalText {
+    text-decoration: none;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
 /*
     *******************************************************************************************
     Footer styles
@@ -192,20 +325,6 @@ div#footer a {
 
 .grayBorder {
     border-color: #E6E6E6;
-}
-
-h1 {
-    padding-bottom: 3px;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 5px;
-    margin-top: 15px;
-    font-size: 20px;
-}
-
-p {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    line-height: 140%;
 }
 
 /*
