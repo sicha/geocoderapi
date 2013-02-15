@@ -1,10 +1,27 @@
-html, body, div, span, object, iframe, blockquote, h1, h2, h3, h4, h5, h6, p, img, pre, abbr, address, cite, code, del, dfn, em, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+@font-face {
+    font-family: 'Titillium';
+    src: url('fonts/titilliumtext25l002-webfont.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body, div, span, object, iframe, blockquote, h1, h2, h3, h4, h5, h6, p, img, pre, abbr, address, cite, code, del, dfn, em, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    font-family: Arial;
+    outline: 0 none;
+    padding: 0;
+    margin: 0;
+}
+
+td {
     background: none repeat scroll 0 0 transparent;
     border: 0 none;
     font-size: 100%;
     outline: 0 none;
     padding: 0;
-    margin: 0;
 }
 
 h1 {
@@ -15,13 +32,16 @@ h1 {
     font-size: 20px;
 }
 
+h5 {
+    font-family: 'Titillium';
+}
+
 p {
     line-height: 140%;
     padding-bottom: 5;
 }
 
 body, html {
-    font-family: 'Arial';
     color: #333333;
 }
 
@@ -69,7 +89,15 @@ div.pageOptions span.page_option_title {
 
 }
 
-div.pageContentBlock {
+div.pageContentBlockUpper {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+}
+
+div.pageContentBlockLower {
     margin-left:auto;
     margin-right:auto;
     max-width: 1200px;
@@ -147,9 +175,9 @@ div.mnuBtn  a{
     height: 19px;
     display: table-cell;
     vertical-align: middle;
-    font-family: sans-serif;
+    font-family: 'Titillium';
     font-weight: bold;
-    font-size: large;
+    font-size: 19px;
     color: #999999;
     text-decoration: none;
 }
@@ -213,7 +241,7 @@ div.lowerThumb {
 div.pgTitle {
     text-decoration: none;
     margin-left: 60px;
-    font-family: Helvetica;
+    font-family: 'Titillium';
     font-weight: bold;
     font-size: 20px;
     color: #d09a9a;
@@ -233,6 +261,49 @@ div#exampleContentHolder {
     padding-top: 10px;
 }
 
+td .col.left {
+    border-right: 1px solid #333;
+    float: left;
+    padding-right: 40px;
+    width: 399px;
+}
+
+div.pageContentBlockLower .col {
+    margin-left: 40px;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+td .col.right {
+    width: 400px;
+    float: left;
+}
+
+div.pageContentBlockLower .col {
+    margin-left: 40px;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+div.imgBox {
+    height: 198px;
+    width: 297px;
+    border-style: solid;
+    border-width: 2px;
+    display: block;
+    background-color: #f8f8f8;
+    border-color: #961b1a;
+
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div.imgBox img {
+    margin: 3px 3px 3px 3px;
+}
+
 div#googleMap {
     float: left;
 }
@@ -250,42 +321,42 @@ div#socialExplorerMap {
 div.redTitleText {
     text-decoration: none;
     margin-left: 60px;
-    font-family: Helvetica;
+    font-family: Titillium;
     font-size: 20px;
     color: #d09a9a;
 }
 
 div.bodyWhiteText {
     text-decoration: none;
-    margin-left: 60px;
-    margin-top: 8px;
     font-family: Helvetica;
     font-size: 12px;
     color: #f8f0f0;
 }
 
-div.normalTitleText {
+.normalTitleText {
     text-decoration: none;
-    margin-left: 60px;
-    font-family: Helvetica;
+    font-family: Titillium;
     font-weight: bold;
     font-size: 20px;
     color: #aeaeae;
+    margin-bottom: 20px;
 }
 
-div.normalTitleText p {
+.normalTitleText p {
     border-bottom-style: solid;
     border-bottom-width: 1px;
+    font-family: Titillium;
     border-color: #e8e8e8;
+    margin-bottom: 20px;
 }
 
-div.normalText {
+.normalText {
     text-decoration: none;
-    margin-left: 60px;
-    margin-right: 60px;
     font-family: Helvetica;
     font-size: 14px;
 }
+
+
 
 /*
     *******************************************************************************************
@@ -310,12 +381,6 @@ div#footer a {
         text-align: center;
 
     }
-}
-
-
-
-.grayBackground {
-    background-color: #F4F7F7;
 }
 
 .topBorder {
