@@ -247,6 +247,21 @@ div.pgTitle {
     color: #d09a9a;
 }
 
+div.pgSubtitle {
+    text-decoration: none;
+    margin-left: 60px;
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    color: #cca69d;
+}
+
+div.pgExample {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
 div#pageBreak {
     height: 100px;
     width: 100%;
@@ -342,7 +357,33 @@ div.bodyWhiteText {
     margin-bottom: 20px;
 }
 
+.normalTitleBlack {
+    text-decoration: none;
+    font-family: Titillium;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.normalSubtitleBlack {
+    text-decoration: none;
+    font-family: Titillium;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
 .normalTitleText p {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-family: Titillium;
+    border-color: #e8e8e8;
+    margin-bottom: 20px;
+}
+
+.normalTitleBlack p {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     font-family: Titillium;
@@ -354,6 +395,18 @@ div.bodyWhiteText {
     text-decoration: none;
     font-family: Helvetica;
     font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.margins {
+   margin-left: 60px;
+   margin-right: 60px
+}
+
+li {
+    margin-left: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 
@@ -367,7 +420,7 @@ div.bodyWhiteText {
 div#footer {
     display: block;
     width: 100%;
-    min-height: 15em;
+    min-height: 2em;
     padding-top: 3em;
     float: left;
 }
@@ -399,21 +452,21 @@ div#footer a {
 */
 
 .codeListing {
-    background: #ffe;
+    background: #fff;
     font-family: monospace;
     padding: 5px;
-    border: 2px dashed #d9a726;
-    margin: 10px;
+    border: 1px solid #aaa;
+    margin: 10px 0px 0px 0px;
     overflow: auto;
 }
 
 .exampleInput {
-    margin: 10px;
+    margin: 0px;
     padding: 0px;
 }
 
 .exampleInputTxt {
-    width: 90%;
+    width: 100%;
     height: 25px;
 }
 
@@ -425,7 +478,8 @@ div#footer a {
 .seButton {
     width: 110px;
     height: 28px;
-    background-color: #d95726;
+    background-color: #b04f45;
+    border: 2px solid #ce8f8a;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
@@ -435,7 +489,7 @@ div#footer a {
     font-weight: normal;
     padding: 5px 15px;
     text-decoration: none;
-    border: none;
+
     text-align: center;
     cursor: pointer;
 
@@ -449,13 +503,13 @@ div#footer a {
 }
 
 .seButton:hover {
-    background-color: #cf3f27;
+    background-color: #b3483d;
     color: #ffffff;
     text-decoration: none;
 }
 
 .seButton:active {
-    background-color: #d95726;
+    background-color: #b3483d;
     color: #ffffff;
     text-decoration: none;
 }
