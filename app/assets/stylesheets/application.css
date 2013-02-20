@@ -48,14 +48,11 @@ body, html {
 div.pageBlock {
     width: 100%;
     float: left;
-    background-image:url(../assets/upperBodyBG.png);
     background-repeat: repeat-x;
     background-color: #f4f5f7;
-    border: 1px solid #eee;
 }
 
 #innerLowerBodyGradient {
-    background-image: url('/assets/lowerBodyBG.png');
     background-repeat: repeat-x;
     height: 198px;
     position: relative;
@@ -343,11 +340,11 @@ div#socialExplorerMap {
     *******************************************************************************************
 */
 
-div.redTitleText {
+div.redTitleText p{
     text-decoration: none;
     margin-left: 60px;
     font-family: Titillium;
-    font-size: 20px;
+    font-size: 24px;
     color: #d09a9a;
 }
 
